@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		8E1B5CAD24697E9300B1EBA5 /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E1B5CAC24697E9300B1EBA5 /* Networking.h */; };
 		8E1B5CAF24697E9300B1EBA5 /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1B5CAE24697E9300B1EBA5 /* Networking.m */; };
+		8E1B5CBE2469840A00B1EBA5 /* GRPC in Frameworks */ = {isa = PBXBuildFile; productRef = 8E1B5CBD2469840A00B1EBA5 /* GRPC */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E1B5CBE2469840A00B1EBA5 /* GRPC in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,6 +35,7 @@
 			children = (
 				8E1B5CAB24697E9300B1EBA5 /* Networking */,
 				8E1B5CAA24697E9300B1EBA5 /* Products */,
+				8E1B5CBA24697FF200B1EBA5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,6 +54,13 @@
 				8E1B5CAE24697E9300B1EBA5 /* Networking.m */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		8E1B5CBA24697FF200B1EBA5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,6 +90,9 @@
 			dependencies = (
 			);
 			name = Networking;
+			packageProductDependencies = (
+				8E1B5CBD2469840A00B1EBA5 /* GRPC */,
+			);
 			productName = Networking;
 			productReference = 8E1B5CA924697E9300B1EBA5 /* libNetworking.a */;
 			productType = "com.apple.product-type.library.static";
@@ -107,6 +120,9 @@
 				Base,
 			);
 			mainGroup = 8E1B5CA024697E9300B1EBA5;
+			packageReferences = (
+				8E1B5CB524697F0E00B1EBA5 /* XCRemoteSwiftPackageReference "grpc-swift" */,
+			);
 			productRefGroup = 8E1B5CAA24697E9300B1EBA5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -279,6 +295,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8E1B5CB524697F0E00B1EBA5 /* XCRemoteSwiftPackageReference "grpc-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/grpc/grpc-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = "1.0.0-alpha.1";
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8E1B5CBD2469840A00B1EBA5 /* GRPC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E1B5CB524697F0E00B1EBA5 /* XCRemoteSwiftPackageReference "grpc-swift" */;
+			productName = GRPC;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8E1B5CA124697E9300B1EBA5 /* Project object */;
 }
