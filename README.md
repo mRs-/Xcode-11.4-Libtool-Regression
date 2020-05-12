@@ -19,3 +19,6 @@ Command Libtool failed with a nonzero exit code
 ## Expected Behaviour
 1. Archive the static library
 2. Build Succeeded
+
+## Additional Notes
+This is also failing on Xcode Beta 11.5 Beta 2
